@@ -52,3 +52,15 @@ BEGIN
                            WHEN 'Dewey' THEN 2
                            ELSE 3 END, mischief_date, title ASC;
 END
+
+CREATE PROCEDURE mischievousNephews()
+BEGIN
+    SELECT WEEKDAY(mischief_date) as weekday, mischief_date, author, title
+    FROM mischief
+    ORDER BY 
+        weekday,
+        length(author),
+        author,
+        mischief_date,
+        title;
+END
