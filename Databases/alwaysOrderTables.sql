@@ -42,3 +42,13 @@ BEGIN
     AND Final > ((0.25 * Midterm1) + (0.25 * Midterm2) + (0.5 * Final))
     ORDER BY LEFT(NAME, 3), ID ASC;
 END
+
+CREATE PROCEDURE mischievousNephews()
+BEGIN
+	SELECT WEEKDAY(mischief_date) as "weekday", mischief_date, author, title
+    FROM mischief
+    ORDER BY weekday ASC,  CASE author 
+                           WHEN 'Huey'  THEN 1 
+                           WHEN 'Dewey' THEN 2
+                           ELSE 3 END, mischief_date, title ASC;
+END
