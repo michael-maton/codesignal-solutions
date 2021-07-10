@@ -33,3 +33,12 @@ BEGIN
      ORDER BY score DESC
      LIMIT 3,5;
 END
+
+CREATE PROCEDURE gradeDistribution()
+BEGIN
+	SELECT Name, ID
+    FROM Grades
+    WHERE Final > ((0.5 * Midterm1) + (0.5 * Midterm2))
+    AND Final > ((0.25 * Midterm1) + (0.25 * Midterm2) + (0.5 * Final))
+    ORDER BY LEFT(NAME, 3), ID ASC;
+END
