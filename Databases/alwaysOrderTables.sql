@@ -18,3 +18,11 @@ BEGIN
     FROM Products 
     ORDER BY price * quantity DESC, name ASC LIMIT 1; /* lexicographically sorts names */
 END
+
+CREATE PROCEDURE contestLeaderboard()
+BEGIN
+	SELECT name 
+    FROM leaderboard
+    ORDER BY score DESC limit 5
+    OFFSET 3;
+END
