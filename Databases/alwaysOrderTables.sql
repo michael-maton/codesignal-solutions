@@ -64,3 +64,14 @@ BEGIN
         mischief_date,
         title;
 END
+
+CREATE PROCEDURE mischievousNephews()
+BEGIN
+    SELECT WEEKDAY(mischief_date) AS weekday, mischief.*
+    FROM mischief
+    ORDER BY
+        weekday,
+        FIELD(author, "Huey", "Dewey", "Louie"),
+        mischief_date,
+        title ASC;
+END
