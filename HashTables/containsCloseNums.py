@@ -28,3 +28,15 @@ def containsCloseNums2(nums, k):
         else:
             lastSeen[n] = i
     return False
+
+
+def containsCloseNums3(nums, k):
+    lastSeen = {}
+    for i, n in enumerate(nums):
+        if n in lastSeen:
+            if i - lastSeen[n] <= k:
+                return True
+
+        lastSeen[n] = i
+        
+    return False
