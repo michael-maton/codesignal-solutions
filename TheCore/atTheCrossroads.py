@@ -12,3 +12,6 @@ def extraNumber(a, b, c):
 
 def isInfiniteProcess(a, b):
     return True if a > b else True if (b-a) % 2 != 0 else False
+
+def arithmeticExpression(a, b, c):
+    return True if a + b == c or a - b == c or a * b == c or a / b == c else False
