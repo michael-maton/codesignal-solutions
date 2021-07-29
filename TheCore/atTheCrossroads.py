@@ -11,4 +11,4 @@ def extraNumber(a, b, c):
     return a if b == c else b if a == c else c
 
 def isInfiniteProcess(a, b):
-    return True if a > b else True if abs(a-b) % 2 != 0 else False
+    return True if a > b else True if (b-a) % 2 != 0 else False
