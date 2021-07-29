@@ -18,3 +18,10 @@ def arithmeticExpression(a, b, c):
 
 def arithmeticExpression2(a, b, c):
     return c in (a+b, a-b, a*b, a/b)
+
+def arithmeticExpression3(A, B, C):
+    return any([
+        A + B == C,
+        A - B == C,
+        A * B == C,
+        A / B == C])
