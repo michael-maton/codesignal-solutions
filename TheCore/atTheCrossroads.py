@@ -15,3 +15,6 @@ def isInfiniteProcess(a, b):
 
 def arithmeticExpression(a, b, c):
     return True if a + b == c or a - b == c or a * b == c or a / b == c else False
+
+def arithmeticExpression2(a, b, c):
+    return c in (a+b, a-b, a*b, a/b)
