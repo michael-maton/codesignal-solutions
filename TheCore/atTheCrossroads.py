@@ -28,3 +28,9 @@ def arithmeticExpression3(A, B, C):
 
 def tennisSet(score1, score2):
     return sorted((score1, score2)) in ([6, 7], [5, 7], [4, 6], [3, 6], [2, 6], [1, 6], [0, 6])
+
+def willYou(young, beautiful, loved):
+    return True if young == True and beautiful == True and loved == False or loved == True and young == False or loved == True and beautiful == False else False
+
+def willYou2(young, beautiful, loved):
+    return loved != (young and beautiful)
