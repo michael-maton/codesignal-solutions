@@ -35,7 +35,8 @@ def willYou(young, beautiful, loved):
 def willYou2(young, beautiful, loved):
     return loved != (young and beautiful)
 
-
+def metroCard(lastNumberOfDays):
+    return [31] if lastNumberOfDays == 30 else [28, 30, 31] if lastNumberOfDays == 31 else [31]
 
 
 
