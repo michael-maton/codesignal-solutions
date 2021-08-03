@@ -34,3 +34,17 @@ def adjacentElementsProduct(inputArray):
 def adjacentElementsProduct2(inputArray):
     return max([inputArray[i] * inputArray[i+1] for i in range(len(inputArray)-1)])
 
+# 1 -> 5 -> 13 -> 25 -> 41 -> ...
+# 1 + 4 + 8 + 12 + 16 + 4*count
+def shapeArea(n):
+    current = 1
+    count = 1
+    while count < n:
+        current += 4*count
+        count += 1
+
+    return current
+
+def shapeArea2(n):
+    return n**2 + (n-1)**2
+
